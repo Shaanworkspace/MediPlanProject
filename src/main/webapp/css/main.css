@@ -30,13 +30,13 @@
     font-family: 'Arvo', serif;
     font-weight: normal;
     text-transform: capitalize;
-    color: #979797; /* Light Grey */
+    color: #000000; /* Light Grey */
     text-decoration: none;
 }
 
 .nav-links li a:hover {
-    color: #5D3FD3; /* Purple */
-    background-color: #4682B4; /* Blue */
+    color: #ffffff; /* Purple */
+    background-color: #000000; /* Blue */
     padding: 5px;
     border-radius: 4px;
 }
@@ -144,7 +144,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     margin: 80px auto; /* To match `top-20` */
-    
+
 }
 
 .chart-container img {
@@ -160,7 +160,7 @@ body {
     justify-content: space-around;
     width: 1539px;
     height: 436px;
-   
+
 }
 
 .stat {
@@ -168,7 +168,7 @@ body {
     flex-direction: column;
     gap: 20px; /* Spacing between items */
     position: relative;
-   
+
 }
 
 
