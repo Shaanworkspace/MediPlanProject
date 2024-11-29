@@ -3,29 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bookingAppointment.css">
     <title>Doctor Appointment Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        .header {
+            background-color: #6f42c1;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Form Section */
+        .container {
+            max-width: 600px;
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #6f42c1;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            color: #6f42c1;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #6f42c1;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5a34a3;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #6f42c1;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Doctor Appointment Booking</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Book Appointment</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main>
-    <section>
+    <!-- Header -->
+    <div class="header">
+        <h1>Doctor Appointment Booking</h1>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container">
         <h2>Book Your Appointment</h2>
-        <form>
+        <form action="#" method="POST">
             <label for="doctor">Select Doctor:</label>
             <select id="doctor" name="doctor">
-                <option value="Dr. Smith">Dr. Smith</option>
-                <option value="Dr. Johnson">Dr. Johnson</option>
-                <option value="Dr. Lee">Dr. Lee</option>
+                <option>Dr. Smith</option>
+                <option>Dr. Johnson</option>
+                <option>Dr. Williams</option>
             </select>
 
             <label for="date">Select Date:</label>
@@ -33,30 +119,28 @@
 
             <label for="time">Select Time:</label>
             <select id="time" name="time">
-                <option value="9:00 AM">9:00 AM</option>
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                <option value="2:00 PM">2:00 PM</option>
-                <option value="3:00 PM">3:00 PM</option>
-                <option value="4:00 PM">4:00 PM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
             </select>
 
             <label for="patient-name">Patient Name:</label>
-            <input type="text" id="patient-name" name="patient-name" required>
+            <input type="text" id="patient-name" name="patient-name" placeholder="Enter your name">
 
-            <label for="contact-number">Contact Number:</label>
-            <input type="tel" id="contact-number" name="contact-number" required>
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your contact number">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
 
-            <button type="submit">Book Appointment</button>
+            <input type="submit" value="Book Appointment">
         </form>
-    </section>
-</main>
+    </div>
 
-<footer>
-    <p>&copy; 2023 Doctor's Office</p>
-</footer>
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2023 Doctor's Office
+    </div>
+
 </body>
 </html>
