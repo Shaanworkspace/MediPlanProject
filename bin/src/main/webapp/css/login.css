@@ -1,0 +1,123 @@
+/* aboutContactUs.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #f8f7fd; /* Light lavender background */
+    color: #333;
+}
+
+/* Login container */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #f9f6fd;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Login Card */
+.login-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.login-title {
+    color: #6f42c1; /* Main purple color */
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    color: #808081; /* Light grey color */
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-label {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #dcdce3;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #6f42c1; /* Purple color when focused */
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6f42c1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #5b2b96; /* Darker purple when hovered */
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #6f42c1;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #6f42c1;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

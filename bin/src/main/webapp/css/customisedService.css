@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 0 10px;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #6f42c1, #a680db);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Services Section */
+.services h2 {
+    color: #6f42c1;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service .icon {
+    font-size: 2.5rem;
+    color: white;
+    background: #6f42c1;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.service h3 {
+    color: #6f42c1;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    color: #555;
+}
+
+/* How It Works Section */
+.how-it-works h2 {
+    color: #6f42c1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.how-it-works ol {
+    list-style: none;
+    counter-reset: list-counter;
+    padding-left: 0px;
+    
+}
+
+.how-it-works li {
+    counter-increment: list-counter;
+    background: #f3e8ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    position: relative;
+
+}
+
+.how-it-works li::before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: white;
+    background: #6f42c1;
+    font-size: 1.2rem;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+    background: #6f42c1;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
