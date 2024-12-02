@@ -31,25 +31,25 @@
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="name" id="name" placeholder="Your Name" />
+									type="text" name="name" id="name" placeholder="Your Name" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" placeholder="Your Email" />
+									type="email" name="email" id="email" placeholder="Your Email" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="pass" id="pass" placeholder="Password" />
+									type="password" name="pass" id="pass" placeholder="Password" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="password" name="re_pass" id="re_pass"
-									placeholder="Repeat your password" />
+									placeholder="Repeat your password" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
 								<input type="text" name="contact" id="contact"
-									placeholder="Contact no" />
+									placeholder="Contact no" required="required"/>
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="agree-term" id="agree-term"
@@ -88,6 +88,18 @@
 	var status = document.getElementById("status").value;
 	if(status=="Success"){
 		swal("Congrats","Welcome to MediPlan","success")
+	}
+	if(status=="Please Fill The Patient Name"){
+		swal("Oops","Please Fill The Patient Name","error")
+	}
+	if(status=="Please Fill The Email"){
+		swal("Oops","Please Fill The Email","error")
+	}
+	if(status=="Please Fill The Phone Number"){
+		swal("Oops","Please Fill The Phone Number","error")
+	}
+	if(status=="Please Fill The Password"){
+		swal("Oops","Please Fill The Password","error")
 	}
 </script>
 

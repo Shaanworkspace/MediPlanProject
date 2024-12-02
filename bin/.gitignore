@@ -36,3 +36,11 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/.github/
+/.gitignore
+/.idea/
+/.mvn/
+/mvnw
+/mvnw.cmd
+/pom.xml
+/src/

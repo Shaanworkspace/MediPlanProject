@@ -20,7 +20,7 @@ public class RegistrationServlet extends HttpServlet {
     private static final String url ="jdbc:mysql://localhost:3306/mediplan?useSSL=false";
     private static final String username="root";
     private static final String password="1234";
-  
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//We need  write to respond to the web so we need to give respond.get Writer()
 		//To print something in web we need a write object which calls Writer (getWriter) to write anything by its object
@@ -32,14 +32,53 @@ public class RegistrationServlet extends HttpServlet {
 		String email = request.getParameter("email");
 		String phone = request.getParameter("contact");
 		String tpassword = request.getParameter("pass") ;
+		String RePassword =request.getParameter("re_pass");
+		
+		Connection connection=null;
+		RequestDispatcher dispatcher = null;
+		if (patient_Name==null || patient_Name.equals("")) {
+			request.setAttribute("status", "Please Fill The Patient Name");				
+			//WRONG : response.sendRedirect("login.jsp"); -> as i need to send from one servlet to other
+			dispatcher= request.getRequestDispatcher("registration.jsp");
+			dispatcher.forward(request, response);
+		}
+		if (email==null || email.equals("")) {
+			request.setAttribute("status", "Please Fill The Email");				
+			//WRONG : response.sendRedirect("login.jsp"); -> as i need to send from one servlet to other
+			dispatcher= request.getRequestDispatcher("registration.jsp");
+			dispatcher.forward(request, response);
+		}
+		if (phone==null || phone.equals("")) {
+			request.setAttribute("status", "Please Fill The Phone Number");				
+			//WRONG : response.sendRedirect("login.jsp"); -> as i need to send from one servlet to other
+			dispatcher= request.getRequestDispatcher("registration.jsp");
+			dispatcher.forward(request, response);
+		}else if(phone.length()>10){
+			request.setAttribute("status", "Please Fill The Phone Number");				
+			//WRONG : response.sendRedirect("login.jsp"); -> as i need to send from one servlet to other
+			dispatcher= request.getRequestDispatcher("registration.jsp");
+			dispatcher.forward(request, response);
+		}
+		if (tpassword==null || tpassword.equals("")) {
+			request.setAttribute("status", "Please Fill The Password");				
+			//WRONG : response.sendRedirect("login.jsp"); -> as i need to send from one servlet to other
+			dispatcher= request.getRequestDispatcher("registration.jsp");
+			dispatcher.forward(request, response);
+		}else if(!tpassword.equals(RePassword)) {
+			request.setAttribute("status", "Please Fill The Password");				
+			//WRONG : response.sendRedirect("login.jsp"); -> as i need to send from one servlet to other
+			dispatcher= request.getRequestDispatcher("registration.jsp");
+			dispatcher.forward(request, response);
+		}
+	
 		//printWriter.println(patient_Name+" "+email+" Come successfully ");
 		
 		//Now code to connect JDBC
 		
 		//Step 1: connect to IDE : as i copied jar file of mysql to webinf->lib
 		//Step-2:load neccessory Drivers: 
-		Connection connection=null;
-		RequestDispatcher dispatcher = null;
+		
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//Loaded neccessory Drivers as com.mysql.cj is the package name and jdbc.Driver is my thing to include

@@ -39,17 +39,17 @@
 								<label for="username"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="username" id="username"
-									placeholder="Your Name" />
+									placeholder="Your Name" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
 									type="password" name="password" id="password"
-									placeholder="Password" />
+									placeholder="Password" required="required"/>
 							</div>
 							<div class="form-group">
 								<input type="checkbox" name="remember-me" id="remember-me"
-									class="agree-term" /> <label for="remember-me"
-									class="label-agree-term"><span><span></span></span>Remember
+									class="agree-term" required="required"/> <label for="remember-me"
+									class="label-agree-term" ><span><span></span></span>Remember
 									me</label>
 							</div>
 							<div class="form-group form-button">
@@ -86,6 +86,12 @@
 	var status = document.getElementById("status").value;
 	if(status=="Failed"){
 		swal("Sorry Sir","Try Correct Username Or Password","error")
+	}
+	if(status=="Please Fill The Email"){
+		swal("Oops ! ","Sir Please Enter Email","error")
+	}
+	if(status=="Please Fill The Password"){
+		swal("Oops ! ","Sir Please Enter Password","error")
 	}
 </script>
 </body>
