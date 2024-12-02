@@ -268,5 +268,7 @@
             </ul>
         </div>
     </footer>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/20/13/20241120130213-60ZDQIBK.js"></script>
 </body>
 </html>
