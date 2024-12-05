@@ -2,6 +2,7 @@
 <!--  -->
 <!-- As respond.getRedirect is to send redirect to login page .Also we have not made session opbj as HttpSession provide implecit method -->
 <!--https://www.w3schools.in/jsp/implicit-objects Study from this link-->
+<!--This attributed is set in login.jsp page -->
 <%
 	if(session.getAttribute("name")==null){
 		response.sendRedirect("login.jsp");	
@@ -40,7 +41,7 @@
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="#page-top">Unique Developer</a>
+			<a class="navbar-brand" href="#page-top">Hi,<%=session.getAttribute("name") %></a>
 			<button
 				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 				type="button" data-bs-toggle="collapse"
@@ -72,7 +73,7 @@
 			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
 				alt="..." />
 			<!-- Masthead Heading-->
-			<h1 class="masthead-heading text-uppercase mb-0">Welcome To Unique Developer</h1>
+			<h1 class="masthead-heading text-uppercase mb-0">Welcome To MediPlan <%=session.getAttribute("name") %></h1>
 			<!-- Icon Divider-->
 			<div class="divider-custom divider-light">
 				<div class="divider-custom-line"></div>

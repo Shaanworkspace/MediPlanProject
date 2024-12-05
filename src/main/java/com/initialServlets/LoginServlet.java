@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
 				//As we have to accept the incomming from web it will come as request to get respond so we will use request also getParameter is the method of java class httpSession
 				
 				String email = request.getParameter("username");
-				String upassword = request.getParameter("pass") ;
+				String upassword = request.getParameter("password") ;
 				HttpSession session = request.getSession();
 				RequestDispatcher dispatcher = null;
 				//Validation From servlet side
@@ -64,7 +64,7 @@ public class LoginServlet extends HttpServlet {
 					connection = DriverManager.getConnection(url,username,password);
 					
 					//Step 4: To write query We use prepared Statement					
-					PreparedStatement pst = connection.prepareStatement("select * from user where email = (?) and password = (?)");
+					PreparedStatement pst = connection.prepareStatement("select * from user where email = ? and password = ?");
 					pst.setString(1,email);
 					pst.setString(2,upassword);
 					

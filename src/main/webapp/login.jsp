@@ -30,7 +30,7 @@
 					</div>
 
 					<div class="signin-form">
-						<h2 class="form-title">Sign in</h2>
+						<h2 class="form-title">Log In Page</h2>
 						
 						<!-- Here is the login ka form code  -->
 						<form method="post" action="login" class="register-form"
@@ -39,7 +39,7 @@
 								<label for="username"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="username" id="username"
-									placeholder="Your Name" required="required"/>
+									placeholder="Enter Email Id" required="required"/>
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
@@ -97,3 +97,6 @@
 </body>
 <!-- This is modified by shaan -->
 </html>
+
+
+<%-- This is the changes made by shaan 10:32 AM - 10:33 AM --%>
