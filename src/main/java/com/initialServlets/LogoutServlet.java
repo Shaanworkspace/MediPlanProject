@@ -23,5 +23,5 @@ public class LogoutServlet extends HttpServlet {
 		response.sendRedirect("login.jsp");
 	}
 
-
+//hi i am shrishti
 }
